@@ -29,6 +29,24 @@ In `app.js`, add the module to your configuration:
 
 That's it!
 
+### Too much magic?
+
+Sometimes, this module can feel a little bit too magical. A redirect to a page of little relevance can be disconcerting. If you wish,  you can redirect only URLs that match a certain regular expression. For instance, this rule matches only URLs that look like dates:
+
+    ... other modules ...
+    'apostrophe-magic-redirects': {
+      filter: /\d\d\d\d\-\d\d\-\d\d/
+    }
+
+You can also tell the module *not* to consider URLs that match a regular expression:
+
+    ... other modules ...
+    'apostrophe-magic-redirects': {
+      notFilter: /\d\d\d\d\-\d\d\-\d\d/
+    }
+
+You may also use both options together.
+
 ## Usage
 
 Try visiting various URLs that formerly 404'd on your site. For instance, if "Biology" has moved from "/departments/biology" to just "/biology", try visiting "/departments/biology". Odds are, you'll go to the right place.

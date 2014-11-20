@@ -27,6 +27,16 @@ magicRedirects.Construct = function(options, callback) {
   };
 
   self.notfound = function(req, finalCallback) {
+    if (options.filter) {
+      if (!req.url.match(options.filter)) {
+        return setImmediate(finalCallback);
+      }
+    }
+    if (options.notFilter) {
+      if (req.url.match(options.notFilter)) {
+        return setImmediate(finalCallback);
+      }
+    }
     return async.series({
       // Try the redirects table before we get too clever
       redirects: function(callback) {
