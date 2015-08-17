@@ -52,3 +52,9 @@ You may also use both options together.
 Try visiting various URLs that formerly 404'd on your site. For instance, if "Biology" has moved from "/departments/biology" to just "/biology", try visiting "/departments/biology". Odds are, you'll go to the right place.
 
 Be aware that Apostrophe already creates "soft redirects" every time you change the slug of a page. This module's usefulness is primarily for big migrations in which much of the content has been re-thought, re-written and moved around.
+
+
+## Changelog
+
+0.5.3: virtual page URLs are remapped properly to the search redirect route, so they don't 404.
+

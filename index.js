@@ -82,8 +82,9 @@ magicRedirects.Construct = function(options, callback) {
             // Let the search module figure out how
             // to get us to snippets
             req.redirect = '/apos-search/search-result?' + qs.stringify({ slug: page.slug });
+          } else {
+            req.redirect = page.slug;
           }
-          req.redirect = page.slug;
           return callback(null);
         });
       }
