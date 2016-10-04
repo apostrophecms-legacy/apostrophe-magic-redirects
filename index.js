@@ -67,7 +67,6 @@ magicRedirects.Construct = function(options, callback) {
             type: { $nin: unsearchable }
           };
         }
-
         // Best search match is our redirect target
         return self._apos.getOne(req, criteria, { search: words.join(' '), limit: 1, fields: { slug: 1 } }, function(err, page) {
           if (err) {
@@ -78,6 +77,7 @@ magicRedirects.Construct = function(options, callback) {
           if (!page) {
             return callback(null);
           }
+          console.log(page.slug);
           if (!page.slug.match(/^\//)) {
             // Let the search module figure out how
             // to get us to snippets

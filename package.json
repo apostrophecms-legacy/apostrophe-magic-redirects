@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-magic-redirects",
-  "version": "0.5.3",
+  "version": "0.5.5",
   "description": "Automagically redirect users to the best page available as an alternative to a 404 Not Found error.",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,7 @@
+## Currently not for 2.x
+
+This module is not currently compatible with Apostrophe 2.x. It is intended for Apostrophe 0.5.x.
+
 # apostrophe-magic-redirects
 
 As a last-ditch effort before issuing a 404, this module automatically issues redirects to the best match found via Apostrophe's [search module](http://github.com/punkave/apostrophe-search). Very helpful when recreating a large site with all-new content and new URLs.
@@ -57,4 +61,3 @@ Be aware that Apostrophe already creates "soft redirects" every time you change 
 ## Changelog
 
 0.5.3: virtual page URLs are remapped properly to the search redirect route, so they don't 404.
-
